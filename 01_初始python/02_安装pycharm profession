@@ -1,0 +1,16 @@
+1.pycharm-professional-2020.1
+2.选择目录
+3.只需要快捷键，不需要path
+
+破解：
+1.先试用
+2.再次进入，把jetbrains-agent.jar拖进来
+
+创建项目
+1.自定义路径
+2.不要选择虚拟机，自己制定解释器interpreter
+
+
+pycharm默认不打开项目
+setting -> Appearance & Behavior -> System Settings
+取消 Reopen last project on startup

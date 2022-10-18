@@ -1,0 +1,22 @@
+https://www.python.org/
+建议安装3.8.5
+1.下载后，双击
+2.重新选择文件夹，不要含中文
+3.选中add path
+4.选中install for all user
+
+notes:======
+Disable path length limit最后那个蓝色框框的
+Changes your machine configuration to allow programs,including Python,
+to bypass the 260 character"MAX_PATH" limitation.
+这是说明你电脑对Python的一些限制，点击它然后确定权限就可以了。
+
+==test
+
+cmd python
+
+退出python cmd
+1.  exit()
+2.  直接关闭cmd
+3.  Ctrl+z  再按回车
+4.  quit()
