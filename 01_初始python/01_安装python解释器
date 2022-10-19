@@ -12,7 +12,6 @@ to bypass the 260 character"MAX_PATH" limitation.
 这是说明你电脑对Python的一些限制，点击它然后确定权限就可以了。
 
 ==test
-
 cmd python
 
 退出python cmd
