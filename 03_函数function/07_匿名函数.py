@@ -9,10 +9,12 @@
 """
 
 
-def func(a, b):
-    return a + b
+# def func(a, b):
+#     return a + b
 
 
 fn = lambda a, b: a + b
+
+
 print(fn)
 print(fn(2, 5))
