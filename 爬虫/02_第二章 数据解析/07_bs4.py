@@ -29,11 +29,12 @@ headers = {
 url2 = "https://www.umei.cc/bizhitupian/weimeibizhi/"
 resp = requests.get(url2, headers=headers)
 resp.encoding = "utf-8"
+resp.content  # 是字节，可用来存储图片
 # print(resp.text)
 page = BeautifulSoup(resp.text, "html.parser")
 list1 = page.find("div", id="infinite_scroll").findAll("a", class_="img_album_btn")
 # list1 = page.findll("div", class_="item masonry_brick")
-# print(list1)
+print(list1)
 for i in list1:
     herf = i.get("href")
     print(herf)
