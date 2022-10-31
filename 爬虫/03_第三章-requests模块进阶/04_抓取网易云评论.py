@@ -100,6 +100,7 @@ def get_Params(data):   # 默认接收的json字符串
     return second  # 返回的params
 
 
+# 转化成16的倍数，为下面的加密算法服务
 def to_16(data):
     print(f"data处理前={data}")
     print(f"data长度={len(data)}")
