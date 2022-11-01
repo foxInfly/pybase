@@ -9,11 +9,13 @@ pip install aiohttp -i https://pypi.tuna.tsinghua.edu.cn/simple
     async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
     frozenlist-1.3.1-cp38-cp38-win_amd64.whl (34 kB)
     attrs-22.1.0-py2.py3-none-any.whl (58 kB)
+pip install aiofiles -i https://pypi.tuna.tsinghua.edu.cn/simple
+    aiofiles-22.1.0-py3-none-any.whl (14 kB)
 
 """
 import asyncio
 import aiohttp
-
+import aiofiles
 
 urls = []
 
@@ -23,7 +25,8 @@ async def aiodownload(url):
     name = url.rsplit("/", 1)[1]  #从右边切1次，去取第二个
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
-            with open(name , mode="wb") as f:
+            # with open(name , mode="wb") as f:
+            async with aiofiles.open(name, mode="wb", encoding="utf-8") as f:
                 f.write(await resp.content.read())
 
 
