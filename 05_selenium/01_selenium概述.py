@@ -54,3 +54,16 @@ for i in li_list:
     # salry = i.find_element(by=by.By.XPATH, value='./div/div/div[2]/span').text  # 找salry
     # print(f"woke:{work},\tsalry:{salry}")
     print(f"woke:{work},\tsalry:")
+# 在selenium的眼中，新窗口是默认不切换过来的，需要窗口切换
+web.switch_to.window(web.window_handles[-1])  # -1j就是最后一个窗口
+
+
+web.close()  # 关闭子窗口
+web.switch_to.window(web.window_handles[0])  # 切换到第一个窗口
+
+# 如果网页遇到了iframe该如何处理；先拿到iframe，再切换到iframe
+iframe = web.find_elements(by=by.By.XPATH, value='xxxxxx')
+web.switch_to.frame(iframe)  # 切换到iframe
+web.switch_to.default_content()  # 默认的窗口，一般是上一个窗口（切换回去）
+
+
