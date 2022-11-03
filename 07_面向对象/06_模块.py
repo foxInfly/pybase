@@ -40,7 +40,19 @@ pip install schedule -i https://pypi.tuna.tsinghua.edu.cn/simple
 """
 import schedule
 import time
+import os
 
+os.system("notepad.exe")
+os.system("calc.exe")
+"""
+getcwd()  当前工作目录
+listdir(path)
+"""
+os.path.abspath("")
+"""
+basename
+splittext()
+"""
 
 def job():
     print(time.time())
@@ -50,6 +62,7 @@ schedule.every(3).seconds.do(job)
 while True:
     schedule.run_pending()
     time.sleep(1)
+
 
 # if __name__ == '__main__':
 #     pass
